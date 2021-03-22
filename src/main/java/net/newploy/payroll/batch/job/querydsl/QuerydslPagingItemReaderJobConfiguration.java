@@ -50,7 +50,7 @@ public class QuerydslPagingItemReaderJobConfiguration {
 
     private ItemWriter<People> writer() {
         return list -> {
-            for (People people: list) {
+            for (People people : list) {
                 log.info("person={}", people);
             }
         };

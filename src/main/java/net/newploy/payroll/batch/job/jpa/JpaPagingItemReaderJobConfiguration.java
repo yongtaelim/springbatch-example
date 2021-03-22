@@ -53,7 +53,7 @@ public class JpaPagingItemReaderJobConfiguration {
 
     private ItemWriter<People> jpaPagingItemWriter() {
         return list -> {
-            for (People store: list) {
+            for (People store : list) {
                 log.info("person={}", store);
             }
         };

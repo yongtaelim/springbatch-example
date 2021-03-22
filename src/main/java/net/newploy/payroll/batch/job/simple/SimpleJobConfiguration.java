@@ -41,7 +41,7 @@ public class SimpleJobConfiguration {
     @JobScope
     public Step simpleStep2(@Value("#{jobParameters[requestDate]}") String requestDate) {
         return stepBuilderFactory.get("simpleStep2")
-                .tasklet((contribution, chunkContext) ->{
+                .tasklet((contribution, chunkContext) -> {
                     log.info(">>>>>>> This is Step2");
                     log.info(">>>>>>> requestDate ={}", requestDate);
                     return RepeatStatus.FINISHED;

@@ -29,11 +29,11 @@ public class DeciderJobConfiguration {
                 .start(startStep())
                 .next(decider()) // 홀수 | 짝수 구분
                 .from(decider()) // decider의 상태가
-                    .on("ODD") // ODD라면
-                    .to(oddStep()) // oddStep로 간다.
+                .on("ODD") // ODD라면
+                .to(oddStep()) // oddStep로 간다.
                 .from(decider()) // decider의 상태가
-                    .on("EVEN") // ODD라면
-                    .to(evenStep()) // evenStep로 간다.
+                .on("EVEN") // ODD라면
+                .to(evenStep()) // evenStep로 간다.
                 .end() // builder 종료
                 .build();
     }
@@ -82,7 +82,7 @@ public class DeciderJobConfiguration {
             int randomNumber = rand.nextInt(50) + 1;
             log.info("랜덤숫자: {}", randomNumber);
 
-            if(randomNumber % 2 == 0) {
+            if (randomNumber % 2 == 0) {
                 return new FlowExecutionStatus("EVEN");
             } else {
                 return new FlowExecutionStatus("ODD");

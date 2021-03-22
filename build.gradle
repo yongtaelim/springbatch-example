@@ -59,6 +59,6 @@ configurations {
     querydsl.extendsFrom compileClasspath
 }
 
-compileQuerydsl{
+compileQuerydsl {
     options.annotationProcessorPath = configurations.querydsl
 }

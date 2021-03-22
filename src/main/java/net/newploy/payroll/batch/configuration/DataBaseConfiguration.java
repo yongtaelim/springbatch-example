@@ -18,7 +18,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 public class DataBaseConfiguration {
 
     @Bean
-    public SqlSessionFactory sqlSessionFactory(HikariDataSource dataSource) throws Exception{
+    public SqlSessionFactory sqlSessionFactory(HikariDataSource dataSource) throws Exception {
 
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setTypeAliasesPackage("net.newploy.payroll.batch");
@@ -30,7 +30,7 @@ public class DataBaseConfiguration {
     }
 
     @Bean
-    public SqlSessionTemplate sqlSession(SqlSessionFactory sqlSessionFactory){
+    public SqlSessionTemplate sqlSession(SqlSessionFactory sqlSessionFactory) {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 }

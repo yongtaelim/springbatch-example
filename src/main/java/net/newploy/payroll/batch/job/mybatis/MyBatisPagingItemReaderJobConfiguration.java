@@ -70,7 +70,7 @@ public class MyBatisPagingItemReaderJobConfiguration {
 
     private ItemWriter<People> MyBatisPagingItemWriter() {
         return list -> {
-            for (People person: list) {
+            for (People person : list) {
                 log.info("Current person={}", person);
             }
         };

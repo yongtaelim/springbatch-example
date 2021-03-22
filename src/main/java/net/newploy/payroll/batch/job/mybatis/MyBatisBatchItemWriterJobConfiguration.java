@@ -81,14 +81,14 @@ public class MyBatisBatchItemWriterJobConfiguration {
 
     public ItemProcessor<People, People> processor1() {
         return person -> {
-            log.info("안녕하세요. "+ person.getFirstName() + "입니다.");
+            log.info("안녕하세요. " + person.getFirstName() + "입니다.");
             return person;
         };
     }
 
     public ItemProcessor<People, People> processor2() {
         return person -> {
-            log.info("안녕하세요. "+ person.getLastName() + "입니다.");
+            log.info("안녕하세요. " + person.getLastName() + "입니다.");
             return person;
         };
     }
